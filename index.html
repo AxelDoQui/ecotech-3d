@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>EcoTech 3D</title>
+<meta name="color-scheme" content="light dark">
 <meta name="description" content="EcoTech 3D: filamento 3D reciclado en Gran Canaria, piezas a medida, ingeniería STI y sensores IoT. Del residuo a la innovación.">
 <meta property="og:title" content="EcoTech 3D · Del residuo a la innovación">
 <meta property="og:description" content="Filamento 3D reciclado, piezas a medida, ingeniería STI y sensores IoT desde Las Palmas de Gran Canaria.">
@@ -12,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='140 140 720 720'%3E%3Cpath transform='translate(160 170)' fill='%2310B981' d='M625.8,165 A330,330 0 0 0 54.2,165 L106.2,195 A270,270 0 0 1 573.8,195 Z M6.6,137.5 L153.8,222.5 L20.2,284 Z'/%3E%3Cpath transform='translate(210 540)' fill='%230EA5E9' d='M4.2,125 A330,330 0 0 0 575.8,125 L523.8,95 A270,270 0 0 1 56.2,95 Z M623.4,152.5 L476.2,67.5 L609.8,6 Z'/%3E%3Cpath transform='translate(353 330)' fill='%2310B981' d='M147,0 L294,85 L147,170 L0,85 Z'/%3E%3Cpath transform='translate(353 415)' fill='%23059669' d='M0,0 L147,85 L147,255 L0,170 Z'/%3E%3Cpath transform='translate(500 415)' fill='%230EA5E9' d='M147,0 L147,170 L0,255 L0,85 Z'/%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
 <style>
 /* Concepto: tienda-laboratorio. Etiqueta de bobina como motivo, ciclo del icono como movimiento,
    franjas azul noche para el proceso. Paleta del manual de marca. */
@@ -39,15 +40,18 @@
   --band:#060B16; --band-line:#1E2C45; --focus:#38BDF8; color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+html.fs1{font-size:112.5%}html.fs2{font-size:125%}html.fs3{font-size:150%}
+html.legible{--f-body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;--f-display:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;--f-mono:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif}
+html.legible body{letter-spacing:.01em;word-spacing:.06em}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
 h1,h2,h3,p,ol,ul,figure{margin:0}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
 .wrap{width:100%;max-width:1160px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 section[id]{scroll-margin-top:84px}
-.eyebrow{font:500 .78rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--green-text)}
+.eyebrow{font:500 .86rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--green-text)}
 h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01em;text-wrap:balance}
 .lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
 .mini{width:36px;height:36px;display:block;flex:none}
@@ -57,7 +61,8 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
 .head-in{display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap;padding-block:12px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.3rem/1 var(--f-display);letter-spacing:-.01em}
-.brand .e{color:var(--green)}.brand .t{color:var(--blue)}
+.brand .e{color:var(--green-text)}.brand .t{color:var(--blue-text)}
+.foot .brand .e{color:#34D399}.foot .brand .t{color:#38BDF8}
 .nav{display:flex;gap:4px 22px;margin-left:auto;font:600 .92rem/1 var(--f-display)}
 .nav a{text-decoration:none;color:var(--muted);padding:10px 2px}
 .nav a:hover{color:var(--fg)}
@@ -101,13 +106,13 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .stage{display:grid;gap:18px;justify-items:center;min-width:0}
 .disc{width:min(100%,380px);aspect-ratio:1;border-radius:50%;background:var(--wash);display:grid;place-items:center}
 .hero-icon{width:94%;height:94%;display:block;overflow:visible}
-.spool{width:min(100%,380px);background:var(--paper);border:1.5px dashed var(--muted);border-radius:4px;padding:16px 18px 14px;font:400 .82rem/1.55 var(--f-mono);position:relative}
-.spool h3{font:500 .78rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--green-text);margin-bottom:10px}
+.spool{width:min(100%,380px);background:var(--paper);border:1.5px dashed var(--muted);border-radius:4px;padding:16px 18px 14px;font:400 .92rem/1.55 var(--f-mono);position:relative}
+.spool .sh{display:block;font:500 .86rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--green-text);margin-bottom:10px}
 .spool dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin:0}
 .spool dt{color:var(--muted)}
 .spool dd{margin:0;text-align:right;font-weight:500}
 .spool .bar{height:22px;margin-top:12px;background:repeating-linear-gradient(90deg,var(--fg) 0 2px,transparent 2px 5px,var(--fg) 5px 6px,transparent 6px 10px);opacity:.8}
-.spool small{display:block;margin-top:8px;color:var(--muted);font-size:.72rem}
+.spool small{display:block;margin-top:8px;color:var(--muted);font-size:.84rem}
 @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.stage{order:2}.disc{width:min(70%,300px)}}
 
 /* Para quién */
@@ -126,12 +131,12 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .process h2{margin-top:14px}
 .steps{list-style:none;padding:0;margin-top:44px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;counter-reset:s}
 .steps li{position:relative;padding-top:46px;counter-increment:s}
-.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;top:0;left:0;font:500 .85rem/1 var(--f-mono);color:#34D399;letter-spacing:.1em}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;top:0;left:0;font:500 .92rem/1 var(--f-mono);color:#34D399;letter-spacing:.1em}
 .steps li::after{content:"";position:absolute;top:7px;left:34px;right:-28px;border-top:1.5px dashed var(--band-line)}
 .steps li:last-child::after{display:none}
 .steps h3{font:700 1.15rem/1.2 var(--f-display);margin-bottom:8px}
 .steps p{color:var(--band-muted);font-size:.95rem}
-.note{margin-top:34px;font:400 .88rem/1.5 var(--f-mono);color:var(--band-muted);border-top:1px solid var(--band-line);padding-top:16px;max-width:78ch}
+.note{margin-top:34px;font:400 .95rem/1.5 var(--f-mono);color:var(--band-muted);border-top:1px solid var(--band-line);padding-top:16px;max-width:78ch}
 @media (max-width:900px){
   .steps{grid-template-columns:1fr;gap:0}
   .steps li{padding:0 0 28px 54px}
@@ -147,7 +152,7 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .dlist h3{display:flex;align-items:center;gap:12px;font:800 1.3rem/1.15 var(--f-display)}
 .dlist h3 svg{width:22px;height:13px;flex:none}
 .dlist p{color:var(--muted)}
-.dlist .for{font:400 .85rem/1.5 var(--f-mono);color:var(--muted)}
+.dlist .for{font:400 .92rem/1.5 var(--f-mono);color:var(--muted)}
 .dlist .for b{display:block;font-weight:500;color:var(--fg)}
 @media (max-width:860px){.dlist li{grid-template-columns:1fr;gap:6px}}
 
@@ -160,7 +165,7 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .pv li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
 .pv li i{font:500 .85rem/28px var(--f-mono);color:var(--on-accent);background:var(--green);border-radius:50%;width:28px;height:28px;text-align:center;font-style:normal}
 .pv-big{font:800 clamp(3.4rem,10vw,6.4rem)/.95 var(--f-display);letter-spacing:-.03em;color:var(--green-text)}
-.pv-cap{font:400 .88rem/1.5 var(--f-mono);color:var(--muted);margin-top:12px;max-width:34ch}
+.pv-cap{font:400 .95rem/1.5 var(--f-mono);color:var(--muted);margin-top:12px;max-width:34ch}
 @media (max-width:860px){.pv-grid{grid-template-columns:1fr}}
 
 /* Precio */
@@ -169,25 +174,25 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .chart{margin-top:34px;max-width:860px}
 .row{display:grid;grid-template-columns:minmax(120px,210px) minmax(0,1fr);gap:8px 20px;align-items:center;padding-block:12px}
 .row .lab{font:600 .95rem/1.3 var(--f-display)}
-.row .lab small{display:block;font:400 .78rem/1.4 var(--f-mono);color:var(--muted);margin-top:2px}
+.row .lab small{display:block;font:400 .86rem/1.4 var(--f-mono);color:var(--muted);margin-top:2px}
 .track{position:relative;height:30px;background:linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/33.333% 100%;border-bottom:1px solid var(--line)}
 .bar{position:absolute;top:4px;height:22px;border-radius:2px}
 .bar.eco{left:0;width:53%;background:var(--green)}
 .bar.imp{left:76.667%;width:16.667%;background:repeating-linear-gradient(135deg,var(--blue) 0 6px,transparent 6px 10px);border:1.5px solid var(--blue)}
-.val{position:absolute;top:50%;transform:translateY(-50%);font:500 .85rem/1 var(--f-mono);white-space:nowrap}
+.val{position:absolute;top:50%;transform:translateY(-50%);font:500 .92rem/1 var(--f-mono);white-space:nowrap}
 .val.eco{left:calc(53% + 8px)}
 .val.imp{right:calc(100% - 76.667% + 8px)}
-.axis{display:grid;grid-template-columns:minmax(120px,210px) minmax(0,1fr);gap:20px;font:400 .78rem/1 var(--f-mono);color:var(--muted)}
+.axis{display:grid;grid-template-columns:minmax(120px,210px) minmax(0,1fr);gap:20px;font:400 .86rem/1 var(--f-mono);color:var(--muted)}
 .axis div{display:flex;justify-content:space-between;padding-top:6px}
 @media (max-width:560px){.row,.axis{grid-template-columns:1fr;gap:4px}.axis>span{display:none}.val.imp{left:auto;right:0;top:-18px;transform:none}}
-.src{margin-top:18px;font:400 .85rem/1.5 var(--f-mono);color:var(--muted);max-width:70ch}
+.src{margin-top:18px;font:400 .92rem/1.5 var(--f-mono);color:var(--muted);max-width:70ch}
 
 /* Contacto */
 .contact{background:var(--surface);border-top:1px solid var(--line);padding-block:clamp(48px,7vw,84px)}
 .contact h2{margin-top:14px}
 .ch{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 28px;margin-top:32px;border-top:1.5px solid var(--fg)}
 .ch div{padding:20px 0;border-bottom:1px solid var(--line);min-width:0}
-.ch dt{font:500 .78rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ch dt{font:500 .86rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .ch dd{margin:8px 0 0;font:600 1.05rem/1.4 var(--f-display);overflow-wrap:anywhere}
 .ch dd.todo{font:400 .95rem/1.5 var(--f-body);color:var(--muted)}
 
@@ -195,7 +200,7 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .foot{background:var(--band);color:var(--band-fg);padding-block:36px}
 .foot-in{display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between}
 .foot .brand{font-size:1.15rem}
-.foot p{font:400 .82rem/1.55 var(--f-mono);color:var(--band-muted);max-width:62ch}
+.foot p{font:400 .9rem/1.55 var(--f-mono);color:var(--band-muted);max-width:62ch}
 
 /* Tienda */
 .shop{padding-block:clamp(48px,7vw,92px)}
@@ -204,12 +209,12 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .card{background:var(--surface);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;overflow:hidden}
 .ph{aspect-ratio:4/3;background:var(--wash);display:grid;place-items:center;position:relative;border-bottom:1px solid var(--line)}
 .ph svg{width:46%;height:auto}
-.ph small{position:absolute;left:10px;bottom:8px;font:400 .7rem/1 var(--f-mono);color:var(--muted)}
+.ph small{position:absolute;left:10px;bottom:8px;font:400 .84rem/1 var(--f-mono);color:var(--muted)}
 .card .body{padding:16px 18px 18px;display:grid;gap:6px;flex:1;align-content:start}
 .card h3{font:800 1.1rem/1.2 var(--f-display)}
 .card p{color:var(--muted);font-size:.92rem}
 .card .pr{margin-top:auto;padding-top:10px;font:500 1.05rem/1 var(--f-mono);color:var(--green-text)}
-.card .pr small{font-size:.74rem;color:var(--muted)}
+.card .pr small{font-size:.84rem;color:var(--muted)}
 .card a.more{font:700 .88rem/1 var(--f-display);color:var(--blue-text);padding-top:8px;text-decoration:none}
 .card a.more:hover{text-decoration:underline}
 /* Quienes somos */
@@ -240,22 +245,47 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .cform input,.cform select,.cform textarea{font:400 1rem/1.4 var(--f-body);color:var(--fg);background:var(--bg);border:1.5px solid var(--muted);border-radius:8px;padding:.7rem .8rem;width:100%}
 .cform textarea{min-height:120px;resize:vertical}
 .cform .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.cform .hint{font:400 .82rem/1.5 var(--f-mono);color:var(--muted)}
+.cform .hint{font:400 .9rem/1.5 var(--f-mono);color:var(--muted)}
 @media (max-width:620px){.cform{grid-template-columns:1fr}}
 .notify{margin-top:40px;padding:22px;border:1.5px dashed var(--muted);border-radius:6px;max-width:820px;display:grid;gap:12px}
 .notify b{font:800 1.1rem/1.2 var(--f-display)}
 .notify form{display:flex;flex-wrap:wrap;gap:10px}
 .notify input{flex:1 1 220px;font:400 1rem/1.4 var(--f-body);color:var(--fg);background:var(--bg);border:1.5px solid var(--muted);border-radius:8px;padding:.7rem .8rem}
 .ch dd a{color:var(--blue-text)}
-.sample{margin-top:22px;font:400 .82rem/1.5 var(--f-mono);color:var(--muted)}
+.sample{margin-top:22px;font:400 .9rem/1.5 var(--f-mono);color:var(--muted)}
 /* Legal */
 .legal{margin-top:22px;border-top:1px solid var(--band-line);padding-top:14px;max-width:84ch}
-.legal summary{cursor:pointer;font:500 .85rem/1.4 var(--f-mono);color:var(--band-fg)}
-.legal div{margin-top:10px;font:400 .8rem/1.6 var(--f-mono);color:var(--band-muted)}
+.legal summary{cursor:pointer;font:500 .92rem/1.4 var(--f-mono);color:var(--band-fg)}
+.legal div{margin-top:10px;font:400 .9rem/1.6 var(--f-mono);color:var(--band-muted)}
 .legal div p+p{margin-top:8px}
 .foot-top{display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between}
-.soc{display:flex;gap:16px;font:500 .85rem/1 var(--f-mono);color:var(--band-muted);list-style:none;padding:0;margin:0;flex-wrap:wrap}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.soc{display:flex;gap:16px;font:500 .92rem/1 var(--f-mono);color:var(--band-muted);list-style:none;padding:0;margin:0;flex-wrap:wrap}
+
+/* Accesibilidad */
+.skip{position:absolute;left:8px;top:-120px;z-index:60;background:var(--green);color:var(--on-accent);padding:.85rem 1.1rem;border-radius:8px;font:700 1rem/1 var(--f-display);text-decoration:none}
+.skip:focus{top:8px}
+main:focus{outline:none}
+.a11y-btn{position:fixed;left:16px;bottom:16px;z-index:40;width:52px;height:52px;border-radius:50%;border:2px solid var(--fg);background:var(--surface);color:var(--fg);cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 10px rgba(15,23,42,.25)}
+.a11y-btn svg{width:28px;height:28px}
+.a11y-panel{position:fixed;left:16px;bottom:80px;z-index:40;width:min(340px,calc(100vw - 32px));max-height:calc(100dvh - 110px);overflow:auto;background:var(--surface);color:var(--fg);border:1.5px solid var(--fg);border-radius:10px;padding:16px;display:grid;gap:14px;box-shadow:0 8px 30px rgba(15,23,42,.3)}
+.a11y-panel[hidden]{display:none}
+.a11y-panel h2{font:800 1.05rem/1.2 var(--f-display);letter-spacing:0}
+.a11y-panel .g{display:grid;gap:6px}
+.a11y-panel .gl{font:600 .9rem/1.2 var(--f-display);color:var(--muted)}
+.a11y-panel .row2{display:flex;gap:6px;flex-wrap:wrap}
+.a11y-panel button{font:600 .95rem/1.2 var(--f-body);color:var(--fg);background:var(--bg);border:1.5px solid var(--muted);border-radius:8px;padding:.6rem .8rem;min-height:44px;cursor:pointer}
+.a11y-panel button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.err{color:#B91C1C;font:600 .9rem/1.4 var(--f-body);min-height:0}
+:root[data-theme="dark"] .err{color:#FCA5A5}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .err{color:#FCA5A5}}
+.cform [aria-invalid="true"]{border-color:#B91C1C;border-width:2px}
+.status{margin-top:10px;font:600 .95rem/1.5 var(--f-body);color:var(--green-text);min-height:1.4em}
+.req{color:var(--muted);font-weight:400}
+.foot{padding-bottom:96px}
+a.more .ar{margin-left:.25em}
+@media (prefers-contrast:more){:root{--muted:#1E293B;--line:#475569}.btn-s{border-width:3px}}
+@media (forced-colors:active){.btn,.menu-btn,.a11y-btn{border:2px solid ButtonText}.bar{forced-color-adjust:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-btn span,.menu-btn span::before,.menu-btn span::after{transition:none}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -271,6 +301,8 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   <symbol id="kit" viewBox="0 0 100 100"><rect x="14" y="26" width="72" height="48" rx="6" fill="var(--green-d)"/><circle cx="34" cy="50" r="9" fill="var(--wash)"/><rect x="50" y="42" width="26" height="6" rx="3" fill="var(--blue)"/><rect x="50" y="54" width="18" height="6" rx="3" fill="var(--wash)"/></symbol>
   <symbol id="cloud" viewBox="0 0 100 100"><path d="M30 70a16 16 0 0 1 2-32 22 22 0 0 1 42 6 13 13 0 0 1-2 26Z" fill="var(--blue)"/><path d="M42 56l8 8 14-16" stroke="var(--wash)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
+
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header class="site-head">
   <div class="wrap head-in">
@@ -294,12 +326,12 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </header>
 
-<main>
-<section class="hero" id="inicio">
+<main id="main" tabindex="-1">
+<section class="hero" id="inicio" aria-labelledby="inicio-t">
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Las Palmas de Gran Canaria · Tienda-laboratorio</span>
-      <h1>Del residuo <em>a la innovación.</em></h1>
+      <h1 id="inicio-t">Del residuo <em>a la innovación.</em></h1>
       <p class="lead">Convertimos plástico de la isla en filamento 3D y lo usamos para fabricar piezas y montar redes, electricidad de baja tensión e IoT para tu negocio. Todo desde un taller que puedes ver trabajar.</p>
       <div class="cta">
         <a class="btn btn-p" href="#punto-verde">Conocer el Punto Verde</a>
@@ -319,8 +351,9 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
           <path transform="translate(500 415)" fill="#0EA5E9" d="M147,0 L147,170 L0,255 L0,85 Z"/>
         </svg>
       </div>
+      <button class="btn btn-s" id="pause-anim" type="button" aria-pressed="false" style="padding:.6rem 1rem;font-size:.88rem">Pausar la animación del icono</button>
       <aside class="spool" aria-label="Maqueta de etiqueta de bobina">
-        <h3>EcoTech 3D · Filamento</h3>
+        <span class="sh">EcoTech 3D · Filamento</span>
         <dl>
           <dt>Material</dt><dd>rPET (PET reciclado)</dd>
           <dt>Peso</dt><dd>1 kg</dd>
@@ -345,10 +378,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
-<section class="process" id="proceso">
+<section class="process" id="proceso" aria-labelledby="proceso-t">
   <div class="wrap">
     <span class="eyebrow">Proceso</span>
-    <h2>Del residuo a la pieza, en cuatro pasos</h2>
+    <h2 id="proceso-t">Del residuo a la pieza, en cuatro pasos</h2>
     <p class="lead" style="margin-top:16px">Todo ocurre en Gran Canaria, así que el plástico no cruza el océano para volver convertido en producto.</p>
     <ol class="steps">
       <li><h3>Recogida</h3><p>Plástico de residuo local, como botellas PET y carcasas de equipos, que llega por el Punto Verde y por convenios con administraciones.</p></li>
@@ -360,10 +393,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
-<section class="divs" id="divisiones">
+<section class="divs" id="divisiones" aria-labelledby="divisiones-t">
   <div class="wrap">
     <span class="eyebrow">Qué hacemos</span>
-    <h2>Cuatro divisiones, un mismo ciclo</h2>
+    <h2 id="divisiones-t">Cuatro divisiones, un mismo ciclo</h2>
     <ul class="dlist">
       <li>
         <h3><svg viewBox="0 0 20 12" aria-hidden="true"><path d="M10 0L20 6L10 12L0 6Z" fill="#10B981"/></svg>EcoTech Store</h3>
@@ -389,11 +422,11 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
-<section class="pv" id="punto-verde">
+<section class="pv" id="punto-verde" aria-labelledby="punto-verde-t">
   <div class="wrap pv-grid">
     <div>
       <span class="eyebrow">Punto Verde</span>
-      <h2>Trae tu plástico y llévate un descuento</h2>
+      <h2 id="punto-verde-t">Trae tu plástico y llévate un descuento</h2>
       <p class="lead">El Punto Verde de la tienda cambia el plástico que ya no usas por descuento en tu compra. Es la forma más corta de cerrar el ciclo.</p>
       <ul>
         <li><i>1</i><span><b>Pásate por la tienda</b> con tu plástico.</span></li>
@@ -408,24 +441,24 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
-<section class="shop" id="tienda">
+<section class="shop" id="tienda" aria-labelledby="tienda-t">
   <div class="wrap">
     <span class="eyebrow">Tienda</span>
-    <h2>Lo que podrás llevarte a casa</h2>
+    <h2 id="tienda-t">Lo que podrás llevarte a casa</h2>
     <p class="lead" style="margin-top:16px">Catálogo de lanzamiento con los precios previstos en el plan de negocio. Las fotos reales llegarán cuando abra el taller.</p>
     <ul class="cards">
-      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#spl"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Bobina de filamento 1 kg</h3><p>rPLA, rPETG o rABS reciclado en Gran Canaria, secado y en bolsa al vacío.</p><div class="pr">15,90 € <small>previsto</small></div><a class="more" href="#contacto">Reservar &rarr;</a></div></li>
-      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#pie"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Pieza técnica 3D</h3><p>Soportes de router, cajas IoT y adaptadores DIN, a medida o en catálogo.</p><div class="pr">12 € <small>media por pieza, previsto</small></div><a class="more" href="#contacto">Pedir presupuesto &rarr;</a></div></li>
-      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#kit"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Kit domótico EcoTech</h3><p>Sensor, relé y carcasa impresa con plástico reciclado, preconfigurado.</p><div class="pr">45 € <small>previsto</small></div><a class="more" href="#contacto">Reservar &rarr;</a></div></li>
-      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#cloud"/></svg><small>Foto próximamente</small></div><div class="body"><h3>EcoTech Business</h3><p>Mantenimiento de tu red y monitorización IoT con suscripción mensual.</p><div class="pr">59 € / mes <small>previsto</small></div><a class="more" href="#contacto">Más información &rarr;</a></div></li>
+      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#spl"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Bobina de filamento 1 kg</h3><p>rPLA, rPETG o rABS reciclado en Gran Canaria, secado y en bolsa al vacío.</p><div class="pr">15,90 € <small>previsto</small></div><a class="more" href="#contacto" aria-label="Reservar bobina de filamento de 1 kg">Reservar<span class="ar" aria-hidden="true">&rarr;</span></a></div></li>
+      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#pie"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Pieza técnica 3D</h3><p>Soportes de router, cajas IoT y adaptadores DIN, a medida o en catálogo.</p><div class="pr">12 € <small>media por pieza, previsto</small></div><a class="more" href="#contacto" aria-label="Pedir presupuesto de pieza técnica 3D">Pedir presupuesto<span class="ar" aria-hidden="true">&rarr;</span></a></div></li>
+      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#kit"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Kit domótico EcoTech</h3><p>Sensor, relé y carcasa impresa con plástico reciclado, preconfigurado.</p><div class="pr">45 € <small>previsto</small></div><a class="more" href="#contacto" aria-label="Reservar kit domótico EcoTech">Reservar<span class="ar" aria-hidden="true">&rarr;</span></a></div></li>
+      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#cloud"/></svg><small>Foto próximamente</small></div><div class="body"><h3>EcoTech Business</h3><p>Mantenimiento de tu red y monitorización IoT con suscripción mensual.</p><div class="pr">59 € / mes <small>previsto</small></div><a class="more" href="#contacto" aria-label="Más información sobre EcoTech Business">Más información<span class="ar" aria-hidden="true">&rarr;</span></a></div></li>
     </ul>
   </div>
 </section>
 
-<section class="price" id="precio">
+<section class="price" id="precio" aria-labelledby="precio-t">
   <div class="wrap">
     <span class="eyebrow">Precio</span>
-    <h2>Una bobina de 1 kg, más barata que la importada</h2>
+    <h2 id="precio-t">Una bobina de 1 kg, más barata que la importada</h2>
     <p class="lead" style="margin-top:16px">Fabricar aquí evita fletes y aduanas. Esta es la comparación que recoge nuestro plan de negocio.</p>
     <div class="chart" role="img" aria-label="Gráfico: la bobina de 1 kg de EcoTech 3D tiene un precio previsto de 15,90 euros; las bobinas importadas cuestan entre 23 y 28 euros.">
       <div class="row">
@@ -442,10 +475,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
-<section class="team" id="equipo">
+<section class="team" id="equipo" aria-labelledby="equipo-t">
   <div class="wrap">
     <span class="eyebrow">Quiénes somos</span>
-    <h2>Un taller nacido en las aulas de Las Palmas</h2>
+    <h2 id="equipo-t">Un taller nacido en las aulas de Las Palmas</h2>
     <div class="team-grid">
       <div>
         <p>EcoTech 3D empezó como proyecto del ciclo de Sistemas de Telecomunicaciones e Informáticos en el IES Politécnico Las Palmas, con una idea sencilla: que el plástico que sobra en la isla vuelva en forma de producto útil.</p>
@@ -459,10 +492,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
-<section class="faq" id="faq">
+<section class="faq" id="faq" aria-labelledby="faq-t">
   <div class="wrap">
     <span class="eyebrow">Preguntas</span>
-    <h2>Lo que más nos preguntan</h2>
+    <h2 id="faq-t">Lo que más nos preguntan</h2>
     <div class="faq-l">
       <details><summary>¿Qué plásticos aceptáis en el Punto Verde?</summary><p>Principalmente botellas PET limpias, mermas de impresión 3D y carcasas de equipos. La lista definitiva y las condiciones se publicarán al abrir.</p></details>
       <details><summary>¿Cómo funciona el descuento?</summary><p>Pesamos y revisamos el material contigo en el mostrador, y el plan prevé un descuento del 15 al 25 % en bobinas, compras o reparaciones. Los porcentajes exactos pueden cambiar.</p></details>
@@ -474,10 +507,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
-<section class="contact" id="contacto">
+<section class="contact" id="contacto" aria-labelledby="contacto-t">
   <div class="wrap">
     <span class="eyebrow">Contacto</span>
-    <h2>Abrimos pronto en Las Palmas de Gran Canaria</h2>
+    <h2 id="contacto-t">Abrimos pronto en Las Palmas de Gran Canaria</h2>
     <p class="lead" style="margin-top:16px">Cuéntanos qué necesitas: filamento, una pieza a medida, una instalación o medir el consumo de tu local.</p>
     <dl class="ch">
       <div><dt>Correo</dt><dd><a href="mailto:hola@ecotech3d.example">hola@ecotech3d.example</a></dd></div>
@@ -488,28 +521,31 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
     </dl>
     <p class="sample">Datos de contacto de ejemplo para el proyecto de clase: el correo, el teléfono y la dirección no son reales.</p>
 
-    <form class="cform" id="cform" aria-label="Formulario de contacto">
-      <label>Nombre<input name="nombre" required autocomplete="name"></label>
-      <label>Tu correo<input name="correo" type="email" required autocomplete="email"></label>
+    <form class="cform" id="cform" aria-label="Formulario de contacto" novalidate>
+      <label>Nombre <span class="req">(obligatorio)</span><input name="nombre" id="f-nombre" required autocomplete="name" aria-describedby="err-nombre"><span class="err" id="err-nombre"></span></label>
+      <label>Tu correo <span class="req">(obligatorio)</span><input name="correo" id="f-correo" type="email" required autocomplete="email" aria-describedby="err-correo"><span class="err" id="err-correo"></span></label>
       <label class="full">Motivo
         <select name="motivo">
           <option>Filamento</option><option>Pieza a medida</option><option>Instalación de red o electricidad</option><option>Sensores y consumo</option><option>Punto Verde</option><option>Otro</option>
         </select>
       </label>
-      <label class="full">Mensaje<textarea name="mensaje" required></textarea></label>
+      <label class="full">Mensaje <span class="req">(obligatorio)</span><textarea name="mensaje" id="f-mensaje" required aria-describedby="err-mensaje"></textarea><span class="err" id="err-mensaje"></span></label>
       <div class="full actions">
         <button class="btn btn-p" type="submit">Preparar correo</button>
         <span class="hint">Se abrirá tu programa de correo con el mensaje listo para enviar.</span>
       </div>
+      <p class="status full" id="cform-status" role="status" aria-live="polite"></p>
     </form>
 
     <div class="notify">
-      <b>Avísame cuando abráis</b>
+      <h3 style="font:800 1.1rem/1.2 var(--f-display)">Avísame cuando abráis</h3>
       <span class="lead" style="font-size:.98rem">Un único correo el día de la apertura, con la dirección, el horario y la oferta de lanzamiento.</span>
-      <form id="nform" aria-label="Aviso de apertura">
-        <input type="email" name="correo" placeholder="tucorreo@ejemplo.com" required aria-label="Tu correo">
+      <form id="nform" aria-label="Aviso de apertura" novalidate>
+        <input type="email" name="correo" id="n-correo" placeholder="tucorreo@ejemplo.com" required autocomplete="email" aria-label="Tu correo para el aviso de apertura" aria-describedby="err-ncorreo">
         <button class="btn btn-s" type="submit">Avisadme</button>
       </form>
+      <span class="err" id="err-ncorreo"></span>
+      <p class="status" id="nform-status" role="status" aria-live="polite"></p>
     </div>
   </div>
 </section>
@@ -526,6 +562,15 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
     </div>
     <p style="margin-top:18px">DEL RESIDUO A LA INNOVACIÓN. Proyecto en fase de lanzamiento: precios y descuentos son los previstos en el plan de negocio y pueden cambiar.</p>
     <details class="legal">
+      <summary>Declaración de accesibilidad</summary>
+      <div>
+        <p><b>Objetivo.</b> Queremos que esta web se pueda usar con teclado, lector de pantalla, ampliación de texto y distintas capacidades visuales, siguiendo las pautas WCAG 2.2 de nivel AA.</p>
+        <p><b>Qué hemos hecho.</b> Enlace para saltar al contenido, estructura de títulos y regiones, textos alternativos, contraste de color comprobado, foco visible, formularios con etiquetas y mensajes de error, respeto a las preferencias de movimiento y contraste del sistema, y un panel propio para cambiar tema, tamaño de letra, tipografía legible y pausar animaciones.</p>
+        <p><b>Estado.</b> Autoevaluación con la herramienta automática axe-core. Faltan pruebas con lectores de pantalla y con personas usuarias, por lo que puede haber fallos que no hemos detectado.</p>
+        <p><b>Contacto.</b> Si encuentras una barrera, escríbenos a hola@ecotech3d.example (correo de ejemplo) y la corregiremos.</p>
+      </div>
+    </details>
+    <details class="legal">
       <summary>Aviso legal y política de privacidad (modelo de ejemplo)</summary>
       <div>
         <p><b>Titular.</b> EcoTech 3D es un proyecto académico del ciclo CFGS Sistemas de Telecomunicaciones e Informáticos (IES Politécnico Las Palmas). Aún no es una empresa constituida, por lo que no hay CIF ni domicilio fiscal. Los datos de contacto son ficticios.</p>
@@ -536,6 +581,33 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
     </details>
   </div>
 </footer>
+
+<aside aria-label="Herramientas de accesibilidad">
+<button class="a11y-btn" id="a11y-btn" type="button" aria-expanded="false" aria-controls="a11y-panel" aria-label="Opciones de accesibilidad">
+  <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="12" cy="4.2" r="2.2"/><path d="M4 8.2l8 1.3 8-1.3.5 1.9-5.7 1.4v3.4l2.1 6.6-1.9.6L12 16l-3 7.4-1.9-.6 2.1-6.6v-3.4L3.5 10.1z"/></svg>
+</button>
+<div class="a11y-panel" id="a11y-panel" role="group" aria-label="Opciones de accesibilidad" hidden>
+  <h2>Accesibilidad</h2>
+  <div class="g"><span class="gl" id="gl-theme">Tema de color</span>
+    <div class="row2" role="group" aria-labelledby="gl-theme">
+      <button type="button" data-theme-set="auto" aria-pressed="true">Automático</button>
+      <button type="button" data-theme-set="light" aria-pressed="false">Claro</button>
+      <button type="button" data-theme-set="dark" aria-pressed="false">Oscuro</button>
+    </div></div>
+  <div class="g"><span class="gl" id="gl-size">Tamaño del texto</span>
+    <div class="row2" role="group" aria-labelledby="gl-size">
+      <button type="button" data-size="-1">Menos</button>
+      <button type="button" data-size="0">Normal</button>
+      <button type="button" data-size="1">Más</button>
+    </div></div>
+  <div class="g"><span class="gl" id="gl-other">Otras opciones</span>
+    <div class="row2" role="group" aria-labelledby="gl-other">
+      <button type="button" id="opt-legible" aria-pressed="false">Letra muy legible</button>
+      <button type="button" id="opt-pause" aria-pressed="false">Pausar animaciones</button>
+    </div></div>
+  <button type="button" id="opt-reset">Restablecer todo</button>
+</div>
+</aside>
 
 <script>
 (function(){
@@ -552,14 +624,67 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
     document.addEventListener('keydown',function(e){if(e.key==='Escape'){setMenu(false);}});
     window.addEventListener('resize',function(){if(window.innerWidth>1200){setMenu(false);}});
   }catch(e){}
+  var a11yLive=null;
+  function validate(form,fields){
+    var first=null;
+    fields.forEach(function(f){
+      var el=document.getElementById(f.id),er=document.getElementById(f.err),v=(el.value||'').trim(),m='';
+      if(!v){m=f.req;}else if(f.email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){m='Escribe un correo válido, por ejemplo nombre@ejemplo.com.';}
+      er.textContent=m;
+      if(m){el.setAttribute('aria-invalid','true');if(!first){first=el;}}else{el.removeAttribute('aria-invalid');}
+    });
+    if(first){first.focus();return false;}
+    return true;
+  }
   try{
     var cf=document.getElementById('cform');
-    if(cf){cf.addEventListener('submit',function(e){e.preventDefault();var f=new FormData(cf);
+    if(cf){cf.addEventListener('submit',function(e){e.preventDefault();
+      var st=document.getElementById('cform-status');st.textContent='';
+      if(!validate(cf,[{id:'f-nombre',err:'err-nombre',req:'Escribe tu nombre.'},{id:'f-correo',err:'err-correo',req:'Escribe tu correo para poder responderte.',email:true},{id:'f-mensaje',err:'err-mensaje',req:'Cuéntanos qué necesitas.'}])){return;}
+      var f=new FormData(cf);
       var body='Hola, soy '+f.get('nombre')+' ('+f.get('correo')+').\n\n'+f.get('mensaje');
+      st.textContent='Abriendo tu programa de correo con el mensaje preparado.';
       location.href='mailto:hola@ecotech3d.example?subject='+encodeURIComponent('Consulta web: '+f.get('motivo'))+'&body='+encodeURIComponent(body);});}
     var nf=document.getElementById('nform');
-    if(nf){nf.addEventListener('submit',function(e){e.preventDefault();var f=new FormData(nf);
+    if(nf){nf.addEventListener('submit',function(e){e.preventDefault();
+      var st=document.getElementById('nform-status');st.textContent='';
+      if(!validate(nf,[{id:'n-correo',err:'err-ncorreo',req:'Escribe tu correo para avisarte.',email:true}])){return;}
+      var f=new FormData(nf);
+      st.textContent='Abriendo tu programa de correo con el aviso preparado.';
       location.href='mailto:hola@ecotech3d.example?subject='+encodeURIComponent('Avisadme de la apertura')+'&body='+encodeURIComponent('Mi correo: '+f.get('correo'));});}
+  }catch(e){}
+
+  /* Panel de accesibilidad */
+  try{
+    var KEY='ecotech-a11y',st={theme:'auto',size:0,legible:false,paused:false};
+    try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv){for(var k in st){if(k in sv){st[k]=sv[k];}}}}catch(e){}
+    var svg=document.querySelector('.hero-icon'),mq=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(mq&&!localStorage.getItem(KEY)){st.paused=true;}
+    function press(b,on){if(b){b.setAttribute('aria-pressed',on?'true':'false');}}
+    function apply(){
+      var r=document.documentElement;
+      if(st.theme==='auto'){r.removeAttribute('data-theme');}else{r.setAttribute('data-theme',st.theme);}
+      r.classList.remove('fs1','fs2','fs3');if(st.size>0){r.classList.add('fs'+st.size);}
+      r.classList.toggle('legible',!!st.legible);
+      document.querySelectorAll('[data-theme-set]').forEach(function(b){press(b,b.getAttribute('data-theme-set')===st.theme);});
+      press(document.getElementById('opt-legible'),st.legible);
+      press(document.getElementById('opt-pause'),st.paused);
+      var pb=document.getElementById('pause-anim');
+      if(pb){press(pb,st.paused);pb.textContent=st.paused?'Reanudar la animación del icono':'Pausar la animación del icono';}
+      if(svg&&svg.pauseAnimations){if(st.paused){svg.pauseAnimations();}else{svg.unpauseAnimations();}}
+      try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}
+    }
+    document.querySelectorAll('[data-theme-set]').forEach(function(b){b.addEventListener('click',function(){st.theme=b.getAttribute('data-theme-set');apply();});});
+    document.querySelectorAll('[data-size]').forEach(function(b){b.addEventListener('click',function(){var d=parseInt(b.getAttribute('data-size'),10);st.size=d===0?0:Math.max(0,Math.min(3,st.size+d));apply();});});
+    document.getElementById('opt-legible').addEventListener('click',function(){st.legible=!st.legible;apply();});
+    document.getElementById('opt-pause').addEventListener('click',function(){st.paused=!st.paused;apply();});
+    var pb2=document.getElementById('pause-anim');if(pb2){pb2.addEventListener('click',function(){st.paused=!st.paused;apply();});}
+    document.getElementById('opt-reset').addEventListener('click',function(){st={theme:'auto',size:0,legible:false,paused:false};apply();});
+    var ab=document.getElementById('a11y-btn'),ap=document.getElementById('a11y-panel');
+    function panel(o){ap.hidden=!o;ab.setAttribute('aria-expanded',o?'true':'false');}
+    ab.addEventListener('click',function(){panel(ap.hidden);if(!ap.hidden){var f=ap.querySelector('button');if(f){f.focus();}}});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!ap.hidden){panel(false);ab.focus();}});
+    apply();
   }catch(e){}
 })();
 </script>
