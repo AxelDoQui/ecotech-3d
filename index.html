@@ -1,4 +1,11 @@
 <title>EcoTech 3D</title>
+<meta name="description" content="EcoTech 3D: filamento 3D reciclado en Gran Canaria, piezas a medida, ingeniería STI y sensores IoT. Del residuo a la innovación.">
+<meta property="og:title" content="EcoTech 3D · Del residuo a la innovación">
+<meta property="og:description" content="Filamento 3D reciclado, piezas a medida, ingeniería STI y sensores IoT desde Las Palmas de Gran Canaria.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://axeldoqui.github.io/ecotech-3d/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='140 140 720 720'%3E%3Cpath transform='translate(160 170)' fill='%2310B981' d='M625.8,165 A330,330 0 0 0 54.2,165 L106.2,195 A270,270 0 0 1 573.8,195 Z M6.6,137.5 L153.8,222.5 L20.2,284 Z'/%3E%3Cpath transform='translate(210 540)' fill='%230EA5E9' d='M4.2,125 A330,330 0 0 0 575.8,125 L523.8,95 A270,270 0 0 1 56.2,95 Z M623.4,152.5 L476.2,67.5 L609.8,6 Z'/%3E%3Cpath transform='translate(353 330)' fill='%2310B981' d='M147,0 L294,85 L147,170 L0,85 Z'/%3E%3Cpath transform='translate(353 415)' fill='%23059669' d='M0,0 L147,85 L147,255 L0,170 Z'/%3E%3Cpath transform='translate(500 415)' fill='%230EA5E9' d='M147,0 L147,170 L0,255 L0,85 Z'/%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap">
 <style>
@@ -164,6 +171,65 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .foot-in{display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between}
 .foot .brand{font-size:1.15rem}
 .foot p{font:400 .82rem/1.55 var(--f-mono);color:var(--band-muted);max-width:62ch}
+
+/* Tienda */
+.shop{padding-block:clamp(48px,7vw,92px)}
+.shop h2{margin-top:14px}
+.cards{list-style:none;padding:0;margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;overflow:hidden}
+.ph{aspect-ratio:4/3;background:var(--wash);display:grid;place-items:center;position:relative;border-bottom:1px solid var(--line)}
+.ph svg{width:46%;height:auto}
+.ph small{position:absolute;left:10px;bottom:8px;font:400 .7rem/1 var(--f-mono);color:var(--muted)}
+.card .body{padding:16px 18px 18px;display:grid;gap:6px;flex:1;align-content:start}
+.card h3{font:800 1.1rem/1.2 var(--f-display)}
+.card p{color:var(--muted);font-size:.92rem}
+.card .pr{margin-top:auto;padding-top:10px;font:500 1.05rem/1 var(--f-mono);color:var(--green-text)}
+.card .pr small{font-size:.74rem;color:var(--muted)}
+.card a.more{font:700 .88rem/1 var(--f-display);color:var(--blue-text);padding-top:8px;text-decoration:none}
+.card a.more:hover{text-decoration:underline}
+/* Quienes somos */
+.team{background:var(--surface);border-block:1px solid var(--line);padding-block:clamp(48px,7vw,92px)}
+.team h2{margin-top:14px}
+.team-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);margin-top:30px}
+.team-grid p+p{margin-top:14px}
+.people{list-style:none;padding:0;display:grid;gap:14px}
+.people li{display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.av{width:64px;height:64px;border-radius:50%;background:var(--wash);display:grid;place-items:center;font:800 1.2rem/1 var(--f-display);color:var(--green-text)}
+.people b{display:block;font:700 1rem/1.2 var(--f-display)}
+.people span{color:var(--muted);font-size:.9rem}
+@media (max-width:760px){.team-grid{grid-template-columns:1fr}}
+/* FAQ */
+.faq{padding-block:clamp(48px,7vw,92px)}
+.faq h2{margin-top:14px}
+.faq-l{margin-top:28px;max-width:820px;border-top:1.5px solid var(--fg)}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{cursor:pointer;font:700 1.02rem/1.35 var(--f-display);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:500 1.2rem/1 var(--f-mono);color:var(--green-text)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:10px;color:var(--muted);max-width:68ch}
+/* Contacto: formulario */
+.cform{margin-top:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px;max-width:820px}
+.cform label{display:grid;gap:6px;font:600 .88rem/1.2 var(--f-display)}
+.cform .full{grid-column:1/-1}
+.cform input,.cform select,.cform textarea{font:400 1rem/1.4 var(--f-body);color:var(--fg);background:var(--bg);border:1.5px solid var(--muted);border-radius:8px;padding:.7rem .8rem;width:100%}
+.cform textarea{min-height:120px;resize:vertical}
+.cform .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cform .hint{font:400 .82rem/1.5 var(--f-mono);color:var(--muted)}
+@media (max-width:620px){.cform{grid-template-columns:1fr}}
+.notify{margin-top:40px;padding:22px;border:1.5px dashed var(--muted);border-radius:6px;max-width:820px;display:grid;gap:12px}
+.notify b{font:800 1.1rem/1.2 var(--f-display)}
+.notify form{display:flex;flex-wrap:wrap;gap:10px}
+.notify input{flex:1 1 220px;font:400 1rem/1.4 var(--f-body);color:var(--fg);background:var(--bg);border:1.5px solid var(--muted);border-radius:8px;padding:.7rem .8rem}
+.ch dd a{color:var(--blue-text)}
+.sample{margin-top:22px;font:400 .82rem/1.5 var(--f-mono);color:var(--muted)}
+/* Legal */
+.legal{margin-top:22px;border-top:1px solid var(--band-line);padding-top:14px;max-width:84ch}
+.legal summary{cursor:pointer;font:500 .85rem/1.4 var(--f-mono);color:var(--band-fg)}
+.legal div{margin-top:10px;font:400 .8rem/1.6 var(--f-mono);color:var(--band-muted)}
+.legal div p+p{margin-top:8px}
+.foot-top{display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between}
+.soc{display:flex;gap:16px;font:500 .85rem/1 var(--f-mono);color:var(--band-muted);list-style:none;padding:0;margin:0;flex-wrap:wrap}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 
@@ -175,6 +241,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
     <path transform="translate(353 415)" fill="var(--ic)" d="M0,0 L147,85 L147,255 L0,170 Z"/>
     <path transform="translate(500 415)" fill="var(--ib)" d="M147,0 L147,170 L0,255 L0,85 Z"/>
   </symbol>
+  <symbol id="spl" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="var(--green)"/><circle cx="50" cy="50" r="30" fill="var(--wash)"/><circle cx="50" cy="50" r="12" fill="var(--bg)" stroke="var(--green-d)" stroke-width="3"/><path d="M50 20a30 30 0 0 1 26 15" stroke="var(--blue)" stroke-width="4" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="pie" viewBox="0 0 100 100"><path d="M50 12L86 32V68L50 88L14 68V32Z" fill="var(--green)"/><path d="M50 12L86 32L50 52L14 32Z" fill="var(--wash)" opacity=".7"/><path d="M50 52V88L14 68V32Z" fill="var(--green-d)"/><path d="M50 52V88L86 68V32Z" fill="var(--blue)"/></symbol>
+  <symbol id="kit" viewBox="0 0 100 100"><rect x="14" y="26" width="72" height="48" rx="6" fill="var(--green-d)"/><circle cx="34" cy="50" r="9" fill="var(--wash)"/><rect x="50" y="42" width="26" height="6" rx="3" fill="var(--blue)"/><rect x="50" y="54" width="18" height="6" rx="3" fill="var(--wash)"/></symbol>
+  <symbol id="cloud" viewBox="0 0 100 100"><path d="M30 70a16 16 0 0 1 2-32 22 22 0 0 1 42 6 13 13 0 0 1-2 26Z" fill="var(--blue)"/><path d="M42 56l8 8 14-16" stroke="var(--wash)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
 <header class="site-head">
@@ -187,7 +257,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
       <a href="#proceso">Proceso</a>
       <a href="#divisiones">Qué hacemos</a>
       <a href="#punto-verde">Punto Verde</a>
+      <a href="#tienda">Tienda</a>
       <a href="#precio">Precio</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#faq">Preguntas</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <a class="btn btn-p" href="#contacto">Pedir presupuesto</a>
@@ -308,6 +381,20 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
+<section class="shop" id="tienda">
+  <div class="wrap">
+    <span class="eyebrow">Tienda</span>
+    <h2>Lo que podrás llevarte a casa</h2>
+    <p class="lead" style="margin-top:16px">Catálogo de lanzamiento con los precios previstos en el plan de negocio. Las fotos reales llegarán cuando abra el taller.</p>
+    <ul class="cards">
+      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#spl"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Bobina de filamento 1 kg</h3><p>rPLA, rPETG o rABS reciclado en Gran Canaria, secado y en bolsa al vacío.</p><div class="pr">15,90 € <small>previsto</small></div><a class="more" href="#contacto">Reservar &rarr;</a></div></li>
+      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#pie"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Pieza técnica 3D</h3><p>Soportes de router, cajas IoT y adaptadores DIN, a medida o en catálogo.</p><div class="pr">12 € <small>media por pieza, previsto</small></div><a class="more" href="#contacto">Pedir presupuesto &rarr;</a></div></li>
+      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#kit"/></svg><small>Foto próximamente</small></div><div class="body"><h3>Kit domótico EcoTech</h3><p>Sensor, relé y carcasa impresa con plástico reciclado, preconfigurado.</p><div class="pr">45 € <small>previsto</small></div><a class="more" href="#contacto">Reservar &rarr;</a></div></li>
+      <li class="card"><div class="ph"><svg aria-hidden="true"><use href="#cloud"/></svg><small>Foto próximamente</small></div><div class="body"><h3>EcoTech Business</h3><p>Mantenimiento de tu red y monitorización IoT con suscripción mensual.</p><div class="pr">59 € / mes <small>previsto</small></div><a class="more" href="#contacto">Más información &rarr;</a></div></li>
+    </ul>
+  </div>
+</section>
+
 <section class="price" id="precio">
   <div class="wrap">
     <span class="eyebrow">Precio</span>
@@ -328,28 +415,98 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   </div>
 </section>
 
+<section class="team" id="equipo">
+  <div class="wrap">
+    <span class="eyebrow">Quiénes somos</span>
+    <h2>Un taller nacido en las aulas de Las Palmas</h2>
+    <div class="team-grid">
+      <div>
+        <p>EcoTech 3D empezó como proyecto del ciclo de Sistemas de Telecomunicaciones e Informáticos en el IES Politécnico Las Palmas, con una idea sencilla: que el plástico que sobra en la isla vuelva en forma de producto útil.</p>
+        <p>Combinamos economía circular con ingeniería de telecomunicaciones y baja tensión, porque las mismas manos que instalan la red pueden fabricar el soporte que la sujeta.</p>
+      </div>
+      <ul class="people">
+        <li><span class="av" aria-hidden="true">AD</span><div><b>Axel Domínguez Quintana</b><span>Cofundador · ingeniería y marca</span></div></li>
+        <li><span class="av" aria-hidden="true">EC</span><div><b>Cofundador/a (por confirmar)</b><span>Operaciones y producción</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Preguntas</span>
+    <h2>Lo que más nos preguntan</h2>
+    <div class="faq-l">
+      <details><summary>¿Qué plásticos aceptáis en el Punto Verde?</summary><p>Principalmente botellas PET limpias, mermas de impresión 3D y carcasas de equipos. La lista definitiva y las condiciones se publicarán al abrir.</p></details>
+      <details><summary>¿Cómo funciona el descuento?</summary><p>Pesamos y revisamos el material contigo en el mostrador, y el plan prevé un descuento del 15 al 25 % en bobinas, compras o reparaciones. Los porcentajes exactos pueden cambiar.</p></details>
+      <details><summary>¿Cuánto tarda un encargo de piezas?</summary><p>Depende del tamaño y del material. Al pedir presupuesto te damos un plazo concreto antes de empezar a imprimir.</p></details>
+      <details><summary>¿El filamento reciclado funciona igual que el nuevo?</summary><p>Lo estamos validando. Publicaremos los ensayos de cada material antes de ofrecerlo para usos técnicos, y no lo anunciaremos como certificado mientras no lo esté.</p></details>
+      <details><summary>¿Hacéis instalaciones fuera de Las Palmas?</summary><p>Empezaremos por Gran Canaria. Si tienes un proyecto en otra isla, escríbenos y lo estudiamos.</p></details>
+      <details><summary>¿Cuándo abrís?</summary><p>Estamos en fase de lanzamiento. Deja tu correo en el aviso de apertura y te escribimos cuando haya fecha.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contacto">
   <div class="wrap">
     <span class="eyebrow">Contacto</span>
     <h2>Abrimos pronto en Las Palmas de Gran Canaria</h2>
     <p class="lead" style="margin-top:16px">Cuéntanos qué necesitas: filamento, una pieza a medida, una instalación o medir el consumo de tu local.</p>
     <dl class="ch">
-      <div><dt>Redes</dt><dd>Instagram, TikTok y LinkedIn</dd></div>
-      <div><dt>Correo</dt><dd class="todo">Se publicará antes de la apertura.</dd></div>
-      <div><dt>Teléfono</dt><dd class="todo">Se publicará antes de la apertura.</dd></div>
-      <div><dt>Dirección</dt><dd class="todo">Las Palmas de Gran Canaria. Calle y horario por confirmar.</dd></div>
+      <div><dt>Correo</dt><dd><a href="mailto:hola@ecotech3d.example">hola@ecotech3d.example</a></dd></div>
+      <div><dt>Teléfono</dt><dd><a href="tel:+34928000000">+34 928 00 00 00</a></dd></div>
+      <div><dt>Dirección</dt><dd>Calle Ejemplo 12, local 3<br>35001 Las Palmas de Gran Canaria</dd></div>
+      <div><dt>Horario previsto</dt><dd>Lun–Vie 9:00–14:00 y 16:00–19:30<br>Sáb 10:00–14:00</dd></div>
+      <div><dt>Redes</dt><dd>@ecotech3d en Instagram, TikTok y LinkedIn</dd></div>
     </dl>
+    <p class="sample">Datos de contacto de ejemplo para el proyecto de clase: el correo, el teléfono y la dirección no son reales.</p>
+
+    <form class="cform" id="cform" aria-label="Formulario de contacto">
+      <label>Nombre<input name="nombre" required autocomplete="name"></label>
+      <label>Tu correo<input name="correo" type="email" required autocomplete="email"></label>
+      <label class="full">Motivo
+        <select name="motivo">
+          <option>Filamento</option><option>Pieza a medida</option><option>Instalación de red o electricidad</option><option>Sensores y consumo</option><option>Punto Verde</option><option>Otro</option>
+        </select>
+      </label>
+      <label class="full">Mensaje<textarea name="mensaje" required></textarea></label>
+      <div class="full actions">
+        <button class="btn btn-p" type="submit">Preparar correo</button>
+        <span class="hint">Se abrirá tu programa de correo con el mensaje listo para enviar.</span>
+      </div>
+    </form>
+
+    <div class="notify">
+      <b>Avísame cuando abráis</b>
+      <span class="lead" style="font-size:.98rem">Un único correo el día de la apertura, con la dirección, el horario y la oferta de lanzamiento.</span>
+      <form id="nform" aria-label="Aviso de apertura">
+        <input type="email" name="correo" placeholder="tucorreo@ejemplo.com" required aria-label="Tu correo">
+        <button class="btn btn-s" type="submit">Avisadme</button>
+      </form>
+    </div>
   </div>
 </section>
 </main>
 
 <footer class="foot">
-  <div class="wrap foot-in">
-    <a class="brand" href="#inicio" aria-label="EcoTech 3D, volver arriba">
-      <svg class="mini sym" aria-hidden="true"><use href="#ec"/></svg>
-      <span><span class="e">Eco</span><span class="t">Tech 3D</span></span>
-    </a>
-    <p>DEL RESIDUO A LA INNOVACIÓN. Proyecto en fase de lanzamiento: precios y descuentos son los previstos en el plan de negocio y pueden cambiar.</p>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#inicio" aria-label="EcoTech 3D, volver arriba">
+        <svg class="mini sym" aria-hidden="true"><use href="#ec"/></svg>
+        <span><span class="e">Eco</span><span class="t">Tech 3D</span></span>
+      </a>
+      <ul class="soc"><li>Instagram @ecotech3d</li><li>TikTok @ecotech3d</li><li>LinkedIn EcoTech 3D</li></ul>
+    </div>
+    <p style="margin-top:18px">DEL RESIDUO A LA INNOVACIÓN. Proyecto en fase de lanzamiento: precios y descuentos son los previstos en el plan de negocio y pueden cambiar.</p>
+    <details class="legal">
+      <summary>Aviso legal y política de privacidad (modelo de ejemplo)</summary>
+      <div>
+        <p><b>Titular.</b> EcoTech 3D es un proyecto académico del ciclo CFGS Sistemas de Telecomunicaciones e Informáticos (IES Politécnico Las Palmas). Aún no es una empresa constituida, por lo que no hay CIF ni domicilio fiscal. Los datos de contacto son ficticios.</p>
+        <p><b>Datos personales.</b> Los formularios no envían nada a ningún servidor: preparan un correo en tu propio programa. EcoTech 3D no almacena tus datos ni usa cookies de seguimiento.</p>
+        <p><b>Precios y ofertas.</b> Los precios y descuentos son previsiones del plan de negocio, no ofertas vinculantes.</p>
+        <p><b>Antes de abrir de verdad</b> habría que completar este texto con la identidad legal del titular, la base jurídica del tratamiento, los derechos del usuario (RGPD) y el aviso de cookies si se añade analítica.</p>
+      </div>
+    </details>
   </div>
 </footer>
 
@@ -358,6 +515,15 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   try{
     var a=document.getElementById('ring-anim');
     if(a && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ a.parentNode.removeChild(a); }
+  }catch(e){}
+  try{
+    var cf=document.getElementById('cform');
+    if(cf){cf.addEventListener('submit',function(e){e.preventDefault();var f=new FormData(cf);
+      var body='Hola, soy '+f.get('nombre')+' ('+f.get('correo')+').\n\n'+f.get('mensaje');
+      location.href='mailto:hola@ecotech3d.example?subject='+encodeURIComponent('Consulta web: '+f.get('motivo'))+'&body='+encodeURIComponent(body);});}
+    var nf=document.getElementById('nform');
+    if(nf){nf.addEventListener('submit',function(e){e.preventDefault();var f=new FormData(nf);
+      location.href='mailto:hola@ecotech3d.example?subject='+encodeURIComponent('Avisadme de la apertura')+'&body='+encodeURIComponent('Mi correo: '+f.get('correo'));});}
   }catch(e){}
 })();
 </script>
