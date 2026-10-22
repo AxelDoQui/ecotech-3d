@@ -160,10 +160,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 /* Contacto */
 .contact{background:var(--surface);border-top:1px solid var(--line);padding-block:clamp(48px,7vw,84px)}
 .contact h2{margin-top:14px}
-.ch{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;margin-top:32px;border-top:1.5px solid var(--fg)}
-.ch div{padding:20px 20px 20px 0;border-bottom:1px solid var(--line)}
+.ch{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 28px;margin-top:32px;border-top:1.5px solid var(--fg)}
+.ch div{padding:20px 0;border-bottom:1px solid var(--line);min-width:0}
 .ch dt{font:500 .78rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.ch dd{margin:8px 0 0;font:600 1.05rem/1.4 var(--f-display)}
+.ch dd{margin:8px 0 0;font:600 1.05rem/1.4 var(--f-display);overflow-wrap:anywhere}
 .ch dd.todo{font:400 .95rem/1.5 var(--f-body);color:var(--muted)}
 
 /* Pie */
@@ -456,7 +456,7 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
       <div><dt>Correo</dt><dd><a href="mailto:hola@ecotech3d.example">hola@ecotech3d.example</a></dd></div>
       <div><dt>Teléfono</dt><dd><a href="tel:+34928000000">+34 928 00 00 00</a></dd></div>
       <div><dt>Dirección</dt><dd>Calle Ejemplo 12, local 3<br>35001 Las Palmas de Gran Canaria</dd></div>
-      <div><dt>Horario previsto</dt><dd>Lun–Vie 9:00–14:00 y 16:00–19:30<br>Sáb 10:00–14:00</dd></div>
+      <div><dt>Horario previsto</dt><dd>Lun–Vie 9:00–14:00<br>y 16:00–19:30<br>Sáb 10:00–14:00</dd></div>
       <div><dt>Redes</dt><dd>@ecotech3d en Instagram, TikTok y LinkedIn</dd></div>
     </dl>
     <p class="sample">Datos de contacto de ejemplo para el proyecto de clase: el correo, el teléfono y la dirección no son reales.</p>
