@@ -66,15 +66,30 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
 .btn-p:hover{background:#34D399}
 .btn-s{border-color:var(--fg);color:var(--fg)}
 .btn-s:hover{background:var(--fg);color:var(--bg)}
-@media (max-width:1060px){
-  .head-in{flex-wrap:wrap;gap:6px 12px;padding-block:8px}
+.menu-btn{display:none;width:44px;height:44px;border:1.5px solid var(--fg);border-radius:10px;background:transparent;color:var(--fg);cursor:pointer;align-items:center;justify-content:center;flex:none}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:20px;height:2px;background:currentColor;border-radius:2px;position:relative;transition:transform .2s,background .2s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.site-head.open .menu-btn span{background:transparent}
+.site-head.open .menu-btn span::before{top:0;transform:rotate(45deg)}
+.site-head.open .menu-btn span::after{top:0;transform:rotate(-45deg)}
+.nav-cta{display:none}
+@media (max-width:1200px){
+  .head-in{flex-wrap:wrap;gap:6px 12px;padding-block:8px;align-items:center}
   .brand{margin-right:auto}
+  .menu-btn{display:inline-flex;order:3}
   .head-in>.btn{order:2;padding:.65rem 1rem;font-size:.88rem}
-  .nav{order:3;width:100%;margin-left:0;overflow-x:auto;white-space:nowrap;gap:0 22px;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-top:1px solid var(--line)}
-  .nav::-webkit-scrollbar{display:none}
-  .nav a{padding:10px 0;flex:none}
+  .nav{order:4;width:100%;margin-left:0;flex-direction:column;gap:0;border-top:1px solid var(--line);font-size:1.05rem}
+  .js .nav{display:none}
+  .js .site-head.open .nav{display:flex}
+  .nav a{padding:14px 2px;border-bottom:1px solid var(--line);min-height:48px;display:flex;align-items:center}
+  .nav a:last-child{border-bottom:0}
+  .site-head{max-height:100vh;max-height:100dvh;overflow-y:auto}
 }
-@media (max-width:380px){.brand{font-size:1.1rem}.head-in>.btn{padding:.6rem .8rem;font-size:.82rem}}
+@media (max-width:480px){
+  .head-in>.btn{display:none}
+  .nav-cta{display:flex!important;color:var(--green-text)!important;font-weight:800}
+}
 
 /* Hero */
 .hero{padding-block:clamp(36px,7vw,88px) clamp(40px,6vw,72px)}
@@ -263,7 +278,7 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
       <svg class="mini sym" aria-hidden="true"><use href="#ec"/></svg>
       <span><span class="e">Eco</span><span class="t">Tech 3D</span></span>
     </a>
-    <nav class="nav" aria-label="Principal">
+    <nav class="nav" id="nav" aria-label="Principal">
       <a href="#proceso">Proceso</a>
       <a href="#divisiones">Qué hacemos</a>
       <a href="#punto-verde">Punto Verde</a>
@@ -272,8 +287,10 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
       <a href="#equipo">Equipo</a>
       <a href="#faq">Preguntas</a>
       <a href="#contacto">Contacto</a>
+      <a class="nav-cta" href="#contacto">Pedir presupuesto</a>
     </nav>
     <a class="btn btn-p" href="#contacto">Pedir presupuesto</a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span></button>
   </div>
 </header>
 
@@ -525,6 +542,15 @@ h2{font:800 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--f-display);letter-spacing:-.01e
   try{
     var a=document.getElementById('ring-anim');
     if(a && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ a.parentNode.removeChild(a); }
+  }catch(e){}
+  try{
+    var root=document.documentElement,hd=document.querySelector('.site-head'),mb=document.querySelector('.menu-btn');
+    root.classList.add('js');
+    function setMenu(o){hd.classList.toggle('open',o);mb.setAttribute('aria-expanded',o?'true':'false');mb.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú');}
+    mb.addEventListener('click',function(){setMenu(!hd.classList.contains('open'));});
+    document.querySelectorAll('.nav a').forEach(function(l){l.addEventListener('click',function(){setMenu(false);});});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){setMenu(false);}});
+    window.addEventListener('resize',function(){if(window.innerWidth>1200){setMenu(false);}});
   }catch(e){}
   try{
     var cf=document.getElementById('cform');
